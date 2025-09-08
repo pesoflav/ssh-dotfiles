@@ -1,0 +1,5 @@
+[alias]
+	s = status
+[init]
+	defaultBranch = main
+
