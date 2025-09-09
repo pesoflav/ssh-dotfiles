@@ -10,7 +10,13 @@ ln -sf "$PWD/.config/git" "$XDG_CONFIG_HOME/git"
 ln -sf "$PWD/.config/tmux" "$XDG_CONFIG_HOME/tmux"
 ln -sf "$PWD/.vimrc" ~/.vimrc
 
-# source bash shell
+# Source bash shell
 ln -sf "$PWD/.bashrc" ~/.bashrc
 source ~/.bashrc
+
+# Server-specific
+if [ "$(hostname)" = "BazaarBetweenTime" ]; then
+    echo "Bootstrapping for BazaarBetweenTime"
+    ln -sf "$PWD/.config/nix" "$XDG_CONFIG_HOME/nix"
+fi
 
