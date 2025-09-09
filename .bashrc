@@ -9,3 +9,8 @@ source "$XDG_CONFIG_HOME/bash/aliases.sh"
 # Base settings
 export TERM=xterm-256color
 
+# Server specific commands
+if [ "$hostname" = "BazaarBetweenTime" ]; then
+    . /etc/profile.d/nix.sh
+fi
+
