@@ -1,5 +1,8 @@
 [alias]
-	s = status
+    s = status
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[user]
+    name = pesoflav
+    email = 220199724+pesoflav@users.noreply.github.com
 
