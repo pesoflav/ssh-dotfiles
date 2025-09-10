@@ -16,5 +16,9 @@ if [ "$(hostname)" = "BazaarBetweenTime" ]; then
     else
 	echo "[ERROR] /etc/profile.d/nix.sh file not found."
     fi
+
+    if [[ ":$PATH:" != *":/nix/var/nix/profiles/default/bin:"* ]]; then
+	export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+    fi
 fi
 
