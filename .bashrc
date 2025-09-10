@@ -12,13 +12,13 @@ export TERM=xterm-256color
 # Server specific commands
 if [ "$(hostname)" = "BazaarBetweenTime" ]; then
     if [ -e /etc/profile.d/nix.sh ]; then
-	. /etc/profile.d/nix.sh
+        . /etc/profile.d/nix.sh
     else
-	echo "[ERROR] /etc/profile.d/nix.sh file not found."
+        echo "[ERROR] /etc/profile.d/nix.sh file not found."
     fi
 
     if [[ ":$PATH:" != *":/nix/var/nix/profiles/default/bin:"* ]]; then
-	export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+        export PATH="/nix/var/nix/profiles/default/bin:$PATH"
     fi
 fi
 
