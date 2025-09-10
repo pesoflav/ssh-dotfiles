@@ -10,7 +10,11 @@ source "$XDG_CONFIG_HOME/bash/aliases.sh"
 export TERM=xterm-256color
 
 # Server specific commands
-if [ "$hostname" = "BazaarBetweenTime" ]; then
-    . /etc/profile.d/nix.sh
+if [ "$(hostname)" = "BazaarBetweenTime" ]; then
+    if [ -e /etc/profile.d/nix.sh ]; then
+	. /etc/profile.d/nix.sh
+    else
+	echo "[ERROR] /etc/profile.d/nix.sh file not found."
+    fi
 fi
 
