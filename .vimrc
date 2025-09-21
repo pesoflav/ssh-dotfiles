@@ -34,9 +34,14 @@ set foldcolumn=1
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
+" Don't have a delay waiting for complex mappings like <Leader>
+set notimeout
 
 
 " ===== Text, tab and indent related =====
+
+" Automatically indent new lines
+set autoindent
 
 " Use spaces instead of tabs
 set expandtab
