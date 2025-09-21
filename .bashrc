@@ -20,5 +20,7 @@ if [ "$(hostname)" = "BazaarBetweenTime" ]; then
     if [[ ":$PATH:" != *":/nix/var/nix/profiles/default/bin:"* ]]; then
         export PATH="/nix/var/nix/profiles/default/bin:$PATH"
     fi
+
+    export KUBECONFIG=$HOME/.kube/config
 fi
 
